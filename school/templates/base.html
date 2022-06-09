@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  <html> 
 <head> 
-<title>Python Club</title> 
+<title>School Tracker</title> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
 <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
@@ -16,8 +16,12 @@
 <a class="navbar-brand" href="{% url 'index' %}">School Tracker</a> 
 </div> 
 <ul class="nav navbar-nav"> 
-<li>Dummy</li>
-<li>Dummy</li> 
+  <li><a href="{% url 'courses' %}">Courses</a></li>
+  <li><a href="{% url 'newcourse' %}">Add Course</a></li>
+  <li><a href="{% url 'assignments' %}">Assignments</a></li>
+  <li><a href="{% url 'newassignment' %}">Add Assignment</a></li>
+  <li><a href="{% url 'login' %}">Login</a></li>
+  <li><a href="{% url 'logout' %}">Logout</a></li>
 </ul> 
 </div> 
 </nav> 

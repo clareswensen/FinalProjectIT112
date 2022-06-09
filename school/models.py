@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Course(models.Model):
     courseTitle = models.CharField(max_length=255)
     instructor = models.CharField(max_length=255)
-    courseDate = models.DateField()
+    courseDate = models.DateField
     courseTime = models.TimeField()
     roomNumber = models.IntegerField()
     description = models.TextField()
@@ -17,7 +17,7 @@ class Course(models.Model):
         db_table='course'
         verbose_name_plural='courses'
 
-class CourseAssignment(models.Model):
+class Assignment(models.Model):
     courseID = models.ForeignKey(Course, on_delete=models.DO_NOTHING)
     assignmentName = models.CharField(max_length=255)
     dueDate = models.DateField()
@@ -28,5 +28,5 @@ class CourseAssignment(models.Model):
         return self.assignmentName
 
     class Meta:
-        db_table='courseAssignment'
-        verbose_name_plural='coursesAssignments'
+        db_table='assignment'
+        verbose_name_plural='assignments'

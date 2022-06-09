@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<h2>Course Detail</h2>
+<ul>
+    <li>Course: {{assignment.courseID}}</li>
+    <li>Assignment Name: {{assignment.assignmentName}}</li>
+    <li>Due Date: {{assignment.dueDate}}</li>
+    <li>Details: {{assignment.assignmentDetails}}</li>
+</ul>
+{% endblock %}
